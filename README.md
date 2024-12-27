@@ -1801,3 +1801,23 @@ Advancements in sensor technology offer significant insights into vehicle condit
        
 
 
+### [CNN-LSTM Hybrid Deep Learning Model for Remaining Useful Life Estimation](https://arxiv.org/abs/2412.15998)
+
+**Authors:**
+Muthukumar G, Jyosna Philip
+
+**Abstract:**
+Remaining Useful Life (RUL) of a component or a system is defined as the length from the current time to the end of the useful life. Accurate RUL estimation plays a crucial role in Predictive Maintenance applications. Traditional regression methods, both linear and non-linear, have struggled to achieve high accuracy in this domain. While Convolutional Neural Networks (CNNs) have shown improved accuracy, they often overlook the sequential nature of the data, relying instead on features derived from sliding windows. Since RUL prediction inherently involves multivariate time series analysis, robust sequence learning is essential. In this work, we propose a hybrid approach combining Convolutional Neural Networks with Long Short-Term Memory (LSTM) networks for RUL estimation. Although CNN-based LSTM models have been applied to sequence prediction tasks in financial forecasting, this is the first attempt to adopt this approach for RUL estimation in prognostics. In this approach, CNN is first employed to efficiently extract features from the data, followed by LSTM, which uses these extracted features to predict RUL. This method effectively leverages sensor sequence information, uncovering hidden patterns within the data, even under multiple operating conditions and fault scenarios. Our results demonstrate that the hybrid CNN-LSTM model achieves the highest accuracy, offering a superior score compared to the other methods.
+       
+
+
+### [RUL forecasting for wind turbine predictive maintenance based on deep learning](https://arxiv.org/abs/2412.17823)
+
+**Authors:**
+Syed Shazaib Shah, Tan Daoliang, Sah Chandan Kumar
+
+**Abstract:**
+Predictive maintenance (PdM) is increasingly pursued to reduce wind farm operation and maintenance costs by accurately predicting the remaining useful life (RUL) and strategically scheduling maintenance. However, the remoteness of wind farms often renders current methodologies ineffective, as they fail to provide a sufficiently reliable advance time window for maintenance planning, limiting PdM's practicality. This study introduces a novel deep learning (DL) methodology for future RUL forecasting. By employing a multi-parametric attention-based DL approach that bypasses feature engineering, thereby minimizing the risk of human error, two models: ForeNet-2d and ForeNet-3d are proposed. These models successfully forecast the RUL for seven multifaceted wind turbine (WT) failures with a 2-week forecast window. The most precise forecast deviated by only 10 minutes from the actual RUL, while the least accurate prediction deviated by 1.8 days, with most predictions being off by only a few hours. This methodology offers a substantial time frame to access remote WTs and perform necessary maintenance, thereby enabling the practical implementation of PdM.
+       
+
+
