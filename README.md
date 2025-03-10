@@ -3312,13 +3312,13 @@ Effective Prognostics and Health Management (PHM) relies on accurate prediction 
        
 
 
-### [Fatigue monitoring and maneuver identification for vehicle fleets using the scattering transform](https://arxiv.org/abs/2302.02737)
+### [Fatigue monitoring and maneuver identification for vehicle fleets using a virtual sensing approach](https://arxiv.org/abs/2302.02737)
 
 **Authors:**
 Leonhard Heindel, Peter Hantschke, Markus Kästner
 
 **Abstract:**
-Extensive monitoring comes at a prohibitive cost, limiting Predictive Maintenance strategies for vehicle fleets. This paper presents a measurement-based soft sensing technique where local strain gauges are only required for few reference vehicles, while the remaining fleet relies exclusively on accelerometers. The scattering transform is used to perform feature extraction, while principal component analysis provides a reduced, low dimensional data representation. This enables direct fatigue damage regression, parameterized from unlabeled usage data. Identification measurements allow for a physical interpretation of the reduced representation. The approach is demonstrated using experimental data from a sensor equipped eBike.
+Extensive monitoring comes at a prohibitive cost, limiting Predictive Maintenance strategies for vehicle fleets. This paper presents a measurement-based virtual sensing technique where local strain gauges are only required for few reference vehicles, while the remaining fleet relies exclusively on accelerometers. The scattering transform is used to perform feature extraction, while principal component analysis provides a reduced, low dimensional data representation. This enables direct fatigue damage regression, parameterized from unlabeled usage data. Identification measurements allow for a physical interpretation of the reduced representation. The approach is demonstrated using experimental data from a sensor equipped eBike, which is made publicly available.
        
 
 
@@ -4643,13 +4643,13 @@ Artificial Intelligence (AI) approaches are increasingly being applied to more a
        
 
 
-### [A probabilistic estimation of remaining useful life from censored time-to-event data](https://arxiv.org/abs/2405.01614)
+### [RULSurv: A probabilistic survival-based method for early censoring-aware prediction of remaining useful life in ball bearings](https://arxiv.org/abs/2405.01614)
 
 **Authors:**
 Christian Marius Lillelund, Fernando Pannullo, Morten Opprud Jakobsen, Manuel Morante, Christian Fischer Pedersen
 
 **Abstract:**
-Predicting the remaining useful life (RUL) of ball bearings plays an important role in predictive maintenance. A common definition of the RUL is the time until a bearing is no longer functional, which we denote as an event, and many data-driven methods have been proposed to predict the RUL. However, few studies have addressed the problem of censored data, where this event of interest is not observed, and simply ignoring these observations can lead to an overestimation of the failure risk. In this paper, we propose a probabilistic estimation of RUL using survival analysis that supports censored data. First, we analyze sensor readings from ball bearings in the frequency domain and annotate when a bearing starts to deteriorate by calculating the Kullback-Leibler (KL) divergence between the probability density function (PDF) of the current process and a reference PDF. Second, we train several survival models on the annotated bearing dataset, capable of predicting the RUL over a finite time horizon using the survival function. This function is guaranteed to be strictly monotonically decreasing and is an intuitive estimation of the remaining lifetime. We demonstrate our approach in the XJTU-SY dataset using cross-validation and find that Random Survival Forests consistently outperforms both non-neural networks and neural networks in terms of the mean absolute error (MAE). Our work encourages the inclusion of censored data in predictive maintenance models and highlights the unique advantages that survival analysis offers when it comes to probabilistic RUL estimation and early fault detection.
+Censored data refers to situations where the full information about a particular event or process is only partially known. In survival analysis, censoring plays an important role, as ignoring such observations can bias the model parameters and overestimate the probability of when the event is likely to occur. There has been a renewed interest in using data-driven methods to predict the remaining useful life (RUL) of ball bearings for predictive maintenance. However, few studies have explicitly addressed the challenge of handling censored data. To address this issue, we introduce a novel and flexible method for early fault detection using Kullback-Leibler (KL) divergence and RUL estimation using survival analysis that naturally supports censored data. We demonstrate our approach in the XJTU-SY dataset using a 5-fold cross-validation across three different operating conditions. When predicting the time to failure for bearings under the highest load (C1, 12.0 kN and 2100 RPM) with 25\% random censoring, our approach achieves a mean absolute error (MAE) of 14.7 minutes (95\% CI 13.6-15.8) using a linear CoxPH model, and an MAE of 12.6 minutes (95\% CI 11.8-13.4) using a nonlinear Random Survival Forests model, compared to an MAE of 18.5 minutes (95\% 17.4-19.6) using a linear LASSO model that does not support censoring. Moreover, our approach achieves a mean cumulative relative accuracy (CRA) of 0.7586 over 5 bearings under the highest load, which improves over several state-of-the-art baselines. Our work highlights the importance of considering censored observations as part of the model design when building predictive models for early fault detection and RUL estimation.
        
 
 
@@ -4899,13 +4899,13 @@ As telecommunications networks become increasingly complex, the integration of a
 
 
 ## July
-### [Learning operando impedance function for battery health with aging-aware equivalent circuit model](https://arxiv.org/abs/2407.06639)
+### [Learning Li-ion battery health and degradation modes from data with aging-aware circuit models](https://arxiv.org/abs/2407.06639)
 
 **Authors:**
 Zihao Zhou, Antti Aitio, David Howey
 
 **Abstract:**
-The wide usage of Lithium-ion batteries (LIBs) requires a deep understanding about battery health. Estimation of battery state-of-health (SOH) is a crucial but yet still challenging task. Pure model-based methods may suffer from inaccuracy and instability of parameter estimations in lifelong aging. While pure data-driven methods rely heavily on quality and quantity of training set, causing lack of generality when extrapolating into unseen cases. In this paper, we propose an aging-aware equivalent circuit model (ECM), which combines model-based and data-driven techniques for SOH estimation. Gaussian process (GP) regression is incorporated in ECM to modelling parameters dependency on operating condition and aging time. The state space formulation of GP is used to enable a computationally efficient co-estimation framework of both parameters and states. Samples from two Open datasets are used to validate model performance, which gives accurate estimation for capacity and impedance. The learnt impedance function can be lined to the shape change of open circuit voltage (OCV) versus SOC curve and thus providing a way to further estimate changes of differential voltage (dV/dQ) curves.
+Non-invasive estimation of Li-ion battery state-of-health from operational data is valuable for battery applications, but remains challenging. Pure model-based methods may suffer from inaccuracy and long-term instability of parameter estimates, whereas pure data-driven methods rely heavily on training data quality and quantity, causing lack of generality when extrapolating to unseen cases. We apply an aging-aware equivalent circuit model for health estimation, combining the flexibility of data-driven techniques within a model-based approach. A simplified electrical model with voltage source and resistor incorporates Gaussian process regression to learn capacity fade over time and also the dependence of resistance on operating conditions and time. The approach was validated against two datasets and shown to give accurate performance with less than 1% relative root mean square error (RMSE) in capacity and less than 2% mean absolute percentage error (MAPE). Critically, we show that the open circuit voltage versus state-of-charge function must be accurately known, and any inaccuracies or changes in this over time strongly influence the inferred resistance. However, this feature (or bug) may also be used to estimate in operando differential voltage curves from operational data.
        
 
 
@@ -4975,7 +4975,7 @@ We develop a novel generative model to simulate vehicle health and forecast faul
 Mengjie Zhao, Cees Taal, Stephan Baggerohr, Olga Fink
 
 **Abstract:**
-Real-time condition monitoring is crucial for the reliable and efficient operation of complex systems. However, relying solely on physical sensors can be limited due to their cost, placement constraints, or inability to directly measure certain critical parameters. Virtual sensing addresses these limitations by leveraging readily available sensor data and system knowledge to estimate inaccessible parameters or infer system states. The increasing complexity of industrial systems necessitates deployments of sensors with diverse modalities to provide a comprehensive understanding of system states. These sensors capture data at varying frequencies to monitor both rapid and slowly varying system dynamics, as well as local and global state evolutions of the systems. This leads to heterogeneous temporal dynamics, which, particularly under varying operational end environmental conditions, pose a significant challenge for accurate virtual sensing. To address this, we propose a Heterogeneous Temporal Graph Neural Network (HTGNN) framework. HTGNN explicitly models signals from diverse sensors and integrates operating conditions into the model architecture. We evaluate HTGNN using two newly released datasets: a bearing dataset with diverse load conditions for bearing load prediction and a year-long simulated dataset for predicting bridge live loads. Our results demonstrate that HTGNN significantly outperforms established baseline methods in both tasks, particularly under highly varying operating conditions. These results highlight HTGNN's potential as a robust and accurate virtual sensing approach for complex systems, paving the way for improved monitoring, predictive maintenance, and enhanced system performance.
+Real-time condition monitoring is crucial for the reliable and efficient operation of complex systems. However, relying solely on physical sensors can be limited due to their cost, placement constraints, or inability to directly measure certain critical parameters. Virtual sensing addresses these limitations by leveraging readily available sensor data and system knowledge to estimate inaccessible parameters or infer system states. The increasing complexity of industrial systems necessitates deployments of sensors with diverse modalities to provide a comprehensive understanding of system states. These sensors capture data at varying frequencies to monitor both rapid and slowly varying system dynamics, as well as local and global state evolutions of the systems. This leads to heterogeneous temporal dynamics, which, particularly under varying operational end environmental conditions, pose a significant challenge for accurate virtual sensing. To address this, we propose a Heterogeneous Temporal Graph Neural Network (HTGNN) framework. HTGNN explicitly models signals from diverse sensors and integrates operating conditions into the model architecture. We evaluate HTGNN using two newly released datasets: a bearing dataset with diverse load conditions for bearing load prediction and a year-long simulated dataset for predicting bridge live loads. Our results demonstrate that HTGNN significantly outperforms established baseline methods in both tasks, particularly under highly varying operating conditions. These results highlight HTGNN's potential as a robust and accurate virtual sensing approach for complex systems, paving the way for improved monitoring, predictive maintenance, and enhanced system performance. Our code and data are available under https://github.com/EPFL-IMOS/htgnn.
        
 
 
@@ -5252,13 +5252,13 @@ Power grids serve as a vital component in numerous industries, seamlessly delive
        
 
 
-### [Intelligent Energy Management: Remaining Useful Life Prediction and Charging Automation System Comprised of Deep Learning and the Internet of Things](https://arxiv.org/abs/2409.17931)
+### [Remaining Useful Life Prediction for Batteries Utilizing an Explainable AI Approach with a Predictive Application for Decision-Making](https://arxiv.org/abs/2409.17931)
 
 **Authors:**
-Biplov Paneru, Bishwash Paneru, DP Sharma Mainali
+Biplov Paneru, Bipul Thapa, Durga Prasad Mainali, Bishwash Paneru, Krishna Bikram Shah
 
 **Abstract:**
-Remaining Useful Life (RUL) of battery is an important parameter to know the battery's remaining life and need for recharge. The goal of this research project is to develop machine learning-based models for the battery RUL dataset. Different ML models are developed to classify the RUL of the vehicle, and the IoT (Internet of Things) concept is simulated for automating the charging system and managing any faults aligning. The graphs plotted depict the relationship between various vehicle parameters using the Blynk IoT platform. Results show that the catboost, Multi-Layer Perceptron (MLP), Gated Recurrent Unit (GRU), and hybrid model developed could classify RUL into three classes with 99% more accuracy. The data is fed using the tkinter GUI for simulating artificial intelligence (AI)-based charging, and with a pyserial backend, data can be entered into the Esp-32 microcontroller for making charge discharge possible with the model's predictions. Also, with an IoT system, the charging can be disconnected, monitored, and analyzed for automation. The results show that an accuracy of 99% can be obtained on models MLP, catboost model and similar accuracy on GRU model can be obtained, and finally relay-based triggering can be made by prediction through the model used for automating the charging and energy-saving mechanism. By showcasing an exemplary Blynk platform-based monitoring and automation phenomenon, we further present innovative ways of monitoring parameters and automating the system.
+Accurately estimating the Remaining Useful Life (RUL) of a battery is essential for determining its lifespan and recharge requirements. In this work, we develop machine learning-based models to predict and classify battery RUL. We introduce a two-level ensemble learning (TLE) framework and a CNN+MLP hybrid model for RUL prediction, comparing their performance against traditional, deep, and hybrid machine learning models. Our analysis evaluates various models for both prediction and classification while incorporating interpretability through SHAP. The proposed TLE model consistently outperforms baseline models in RMSE, MAE, and R squared error, demonstrating its superior predictive capabilities. Additionally, the XGBoost classifier achieves an impressive 99% classification accuracy, validated through cross-validation techniques. The models effectively predict relay-based charging triggers, enabling automated and energy-efficient charging processes. This automation reduces energy consumption and enhances battery performance by optimizing charging cycles. SHAP interpretability analysis highlights the cycle index and charging parameters as the most critical factors influencing RUL. To improve accessibility, we developed a Tkinter-based GUI that allows users to input new data and predict RUL in real time. This practical solution supports sustainable battery management by enabling data-driven decisions about battery usage and maintenance, contributing to energy-efficient and innovative battery life prediction.
        
 
 
@@ -5349,7 +5349,7 @@ Lithium-ion batteries are a key energy storage technology driving revolutions in
 Youndo Do, Marc Zebrowitz, Jackson Stahl, Fan Zhang
 
 **Abstract:**
-Robotics has gained significant attention due to its autonomy and ability to automate in the nuclear industry. However, the increasing complexity of robots has led to a growing demand for advanced simulation and control methods to predict robot behavior and optimize plant performance. Most existing digital twins only address parts of systems and do not offer an overall design of nuclear power plants. Furthermore, they are often designed for specific algorithms or tasks, making them unsuitable for broader research applications or other potential projects. In response, we propose a comprehensive nuclear power plant designed to enhance real-time monitoring, operational efficiency, and predictive maintenance. We selected to model a full-scope nuclear power plant in Unreal Engine 5 to incorporate the complexities and various phenomena. The high-resolution simulation environment is integrated with a General Pressurized Water Reactor Simulator, a high-fidelity physics-driven software, to create a realistic flow of nuclear power plant and a real-time updating virtual environment. Furthermore, the virtual environment provides various features and a Python bridge for researchers to test custom algorithms and frameworks easily. The digital twin's performance is presented, and several research ideas - such as multi-robot task scheduling and robot navigation in the radiation area - using implemented features are presented.
+Robotics has gained significant attention in the nuclear industry due its precision and ability to automate tasks. However, the increasing complexity of robots has led to a growing demand for advanced simulation and control methods to predict robot behavior and optimize plant performance, motivating the use of digital twins for robotic applications. Most existing digital twins only address parts of systems and do not offer a total design of a nuclear power plant. Furthermore, they are often designed for specific algorithms or tasks, making them unsuitable for broader research applications or projects. In response, this work proposes a comprehensive nuclear power plant digital twin designed to improve real-time monitoring, operational efficiency, and predictive maintenance. The full nuclear power plant is modeled in Unreal Engine 5 to incorporate the complexities and various phenomena. The high-resolution simulation environment is integrated with a Generic Pressurized Water Reactor Simulator, a high-fidelity physics-driven software, to create a realistic model of a nuclear power plant and a real-time updated virtual environment. The virtual environment provides various features for researchers to easily test custom robot algorithms and frameworks, applicable to research in the nuclear industry as well as industrial systems in general. The digital twin's performance is presented, and critical research problems are addressed, including multi-robot task scheduling and robot navigation in radiation-affected areas, by leveraging implemented features.
        
 
 
@@ -5889,7 +5889,7 @@ This paper presents a novel predictive maintenance framework centered on Enhance
        
 
 
-### [Weather-Driven Priority Charging for Battery Storage Systems in Hybrid Renewable Energy Grid](https://arxiv.org/abs/2501.06104)
+### [Weather-Driven Priority Charging for Battery Storage Systems in Hybrid Renewable Energy Grids](https://arxiv.org/abs/2501.06104)
 
 **Authors:**
 Dhrumil Bhatt, Siddharth Penumatsa, Nirbhay Singhal
@@ -5916,6 +5916,200 @@ Richard R. Foster, Laura Ellwein Fix
 
 **Abstract:**
 The complexity of mathematical models describing respiratory mechanics has grown in recent years, however, parameter identifiability of such models has only been studied in the last decade in the context of observable data. This study investigates parameter identifiability of a nonlinear respiratory mechanics model tuned to the physiology of an extremely preterm infant, using global Morris screening, local deterministic sensitivity analysis, and singular value decomposition-based subset selection. The model predicts airflow and dynamic pulmonary volumes and pressures under varying levels of continuous positive airway pressure, and a range of parameters characterizing both surfactant-treated and surfactant-deficient lung. Sensitivity analyses indicated eleven parameters influence model outputs over the range of continuous positive airway pressure and lung health scenarios. The model was adapted to data from a spontaneously breathing 1 kg infant using gradient-based optimization to estimate the parameter subset characterizing the patient's state of health.
+       
+
+
+### [Data Enrichment Opportunities for Distribution Grid Cable Networks using Variational Autoencoders](https://arxiv.org/abs/2501.10920)
+
+**Authors:**
+Konrad Sundsgaard, Kutay Bölat, Guangya Yang
+
+**Abstract:**
+Electricity distribution cable networks suffer from incomplete and unbalanced data, hindering the effectiveness of machine learning models for predictive maintenance and reliability evaluation. Features such as the installation date of the cables are frequently missing. To address data scarcity, this study investigates the application of Variational Autoencoders (VAEs) for data enrichment, synthetic data generation, imbalanced data handling, and outlier detection. Based on a proof-of-concept case study for Denmark, targeting the imputation of missing age information in cable network asset registers, the analysis underlines the potential of generative models to support data-driven maintenance. However, the study also highlights several areas for improvement, including enhanced feature importance analysis, incorporating network characteristics and external features, and handling biases in missing data. Future initiatives should expand the application of VAEs by incorporating semi-supervised learning, advanced sampling techniques, and additional distribution grid elements, including low-voltage networks, into the analysis.
+       
+
+
+### [DLinear-based Prediction of Remaining Useful Life of Lithium-Ion Batteries: Feature Engineering through Explainable Artificial Intelligence](https://arxiv.org/abs/2501.11542)
+
+**Authors:**
+Minsu Kim, Jaehyun Oh, Sang-Young Lee, Junghwan Kim
+
+**Abstract:**
+Accurate prediction of the Remaining Useful Life (RUL) of lithium-ion batteries is essential for ensuring safety, reducing maintenance costs, and optimizing usage. However, predicting RUL is challenging due to the nonlinear characteristics of the degradation caused by complex chemical reactions. Machine learning allows precise predictions by learning the latent functions of degradation relationships based on cycling behavior. This study introduces an accurate RUL prediction approach based on feature engineering and DLinear, applied to the dataset from NASA's Prognostics Center of Excellence. Among the 20 features generated from current, voltage, temperature, and time provided in this dataset, key features contributing to degradation are selected using Pearson correlation coefficient and Shapley values. Shapley value-based feature selection effectively reflects cell-to-cell variability, showing similar importance rankings across all cells. The DLinear-based RUL prediction using key features efficiently captures the time-series trend, demonstrating significantly better performance compared to Long Short-Term Memory and Transformer models.
+       
+
+
+### [Transformer Vibration Forecasting for Advancing Rail Safety and Maintenance 4.0](https://arxiv.org/abs/2501.11730)
+
+**Authors:**
+Darío C. Larese, Almudena Bravo Cerrada, Gabriel Dambrosio Tomei, Alejandro Guerrero-López, Pablo M. Olmos, María Jesús Gómez García
+
+**Abstract:**
+Maintaining railway axles is critical to preventing severe accidents and financial losses. The railway industry is increasingly interested in advanced condition monitoring techniques to enhance safety and efficiency, moving beyond traditional periodic inspections toward Maintenance 4.0.
+  This study introduces a robust Deep Autoregressive solution that integrates seamlessly with existing systems to avert mechanical failures. Our approach simulates and predicts vibration signals under various conditions and fault scenarios, improving dataset robustness for more effective detection systems. These systems can alert maintenance needs, preventing accidents preemptively. We use experimental vibration signals from accelerometers on train axles.
+  Our primary contributions include a transformer model, ShaftFormer, designed for processing time series data, and an alternative model incorporating spectral methods and enhanced observation models. Simulating vibration signals under diverse conditions mitigates the high cost of obtaining experimental signals for all scenarios. Given the non-stationary nature of railway vibration signals, influenced by speed and load changes, our models address these complexities, offering a powerful tool for predictive maintenance in the rail industry.
+       
+
+
+### [Automatic selection of the best neural architecture for time series forecasting via multi-objective optimization and Pareto optimality conditions](https://arxiv.org/abs/2501.12215)
+
+**Authors:**
+Qianying Cao, Shanqing Liu, Alan John Varghese, Jerome Darbon, Michael Triantafyllou, George Em Karniadakis
+
+**Abstract:**
+Time series forecasting plays a pivotal role in a wide range of applications, including weather prediction, healthcare, structural health monitoring, predictive maintenance, energy systems, and financial markets. While models such as LSTM, GRU, Transformers, and State-Space Models (SSMs) have become standard tools in this domain, selecting the optimal architecture remains a challenge. Performance comparisons often depend on evaluation metrics and the datasets under analysis, making the choice of a universally optimal model controversial. In this work, we introduce a flexible automated framework for time series forecasting that systematically designs and evaluates diverse network architectures by integrating LSTM, GRU, multi-head Attention, and SSM blocks. Using a multi-objective optimization approach, our framework determines the number, sequence, and combination of blocks to align with specific requirements and evaluation objectives. From the resulting Pareto-optimal architectures, the best model for a given context is selected via a user-defined preference function. We validate our framework across four distinct real-world applications. Results show that a single-layer GRU or LSTM is usually optimal when minimizing training time alone. However, when maximizing accuracy or balancing multiple objectives, the best architectures are often composite designs incorporating multiple block types in specific configurations. By employing a weighted preference function, users can resolve trade-offs between objectives, revealing novel, context-specific optimal architectures. Our findings underscore that no single neural architecture is universally optimal for time series forecasting. Instead, the best-performing model emerges as a data-driven composite architecture tailored to user-defined criteria and evaluation objectives.
+       
+
+
+### [Split Knowledge Distillation for Large Models in IoT: Architecture, Challenges, and Solutions](https://arxiv.org/abs/2501.17164)
+
+**Authors:**
+Zuguang Li, Wen Wu, Shaohua Wu, Qiaohua Lin, Yaping Sun, Hui Wang
+
+**Abstract:**
+Large models (LMs) have immense potential in Internet of Things (IoT) systems, enabling applications such as intelligent voice assistants, predictive maintenance, and healthcare monitoring. However, training LMs on edge servers raises data privacy concerns, while deploying them directly on IoT devices is constrained by limited computational and memory resources. We analyze the key challenges of training LMs in IoT systems, including energy constraints, latency requirements, and device heterogeneity, and propose potential solutions such as dynamic resource management, adaptive model partitioning, and clustered collaborative training. Furthermore, we propose a split knowledge distillation framework to efficiently distill LMs into smaller, deployable versions for IoT devices while ensuring raw data remains local. This framework integrates knowledge distillation and split learning to minimize energy consumption and meet low model training delay requirements. A case study is presented to evaluate the feasibility and performance of the proposed framework.
+       
+
+
+### [Battery State of Health Estimation Using LLM Framework](https://arxiv.org/abs/2501.18123)
+
+**Authors:**
+Aybars Yunusoglu, Dexter Le, Karn Tiwari, Murat Isik, I. Can Dikmen
+
+**Abstract:**
+Battery health monitoring is critical for the efficient and reliable operation of electric vehicles (EVs). This study introduces a transformer-based framework for estimating the State of Health (SoH) and predicting the Remaining Useful Life (RUL) of lithium titanate (LTO) battery cells by utilizing both cycle-based and instantaneous discharge data. Testing on eight LTO cells under various cycling conditions over 500 cycles, we demonstrate the impact of charge durations on energy storage trends and apply Differential Voltage Analysis (DVA) to monitor capacity changes (dQ/dV) across voltage ranges. Our LLM model achieves superior performance, with a Mean Absolute Error (MAE) as low as 0.87\% and varied latency metrics that support efficient processing, demonstrating its strong potential for real-time integration into EVs. The framework effectively identifies early signs of degradation through anomaly detection in high-resolution data, facilitating predictive maintenance to prevent sudden battery failures and enhance energy efficiency.
+       
+
+
+## February
+### [Sequential Multi-objective Multi-agent Reinforcement Learning Approach for Predictive Maintenance](https://arxiv.org/abs/2502.02071)
+
+**Authors:**
+Yan Chen, Cheng Liu
+
+**Abstract:**
+Existing predictive maintenance (PdM) methods typically focus solely on whether to replace system components without considering the costs incurred by inspection. However, a well-considered approach should be able to minimize Remaining Useful Life (RUL) at engine replacement while maximizing inspection interval. To achieve this, multi-agent reinforcement learning (MARL) can be introduced. However, due to the sequential and mutually constraining nature of these 2 objectives, conventional MARL is not applicable. Therefore, this paper introduces a novel framework and develops a Sequential Multi-objective Multi-agent Proximal Policy Optimization (SMOMA-PPO) algorithm. Furthermore, to provide comprehensive and effective degradation information to RL agents, we also employed Gated Recurrent Unit, quantile regression, and probability distribution fitting to develop a GRU-based RUL Prediction (GRP) model. Experiments demonstrate that the GRP method significantly improves the accuracy of RUL predictions in the later stages of system operation compared to existing methods. When incorporating its output into SMOMA-PPO, we achieve at least a 15% reduction in average RUL without unscheduled replacements (UR), nearly a 10% increase in inspection interval, and an overall decrease in maintenance costs. Importantly, our approach offers a new perspective for addressing multi-objective maintenance planning with sequential constraints, effectively enhancing system reliability and reducing maintenance expenses.
+       
+
+
+### [Using Federated Machine Learning in Predictive Maintenance of Jet Engines](https://arxiv.org/abs/2502.05321)
+
+**Authors:**
+Asaph Matheus Barbosa, Thao Vy Nhat Ngo, Elaheh Jafarigol, Theodore B. Trafalis, Emuobosa P. Ojoboh
+
+**Abstract:**
+The goal of this paper is to predict the Remaining Useful Life (RUL) of turbine jet engines using a federated machine learning framework. Federated Learning enables multiple edge devices/nodes or servers to collaboratively train a shared model without sharing sensitive data, thus preserving data privacy and security. By implementing a nonlinear model, the system aims to capture complex relationships and patterns in the engine data to enhance the accuracy of RUL predictions. This approach leverages decentralized computation, allowing models to be trained locally at each device before aggregating the learned weights at a central server. By predicting the RUL of jet engines accurately, maintenance schedules can be optimized, downtime reduced, and operational efficiency improved, ultimately leading to cost savings and enhanced performance in the aviation industry. Computational results are provided by using the C-MAPSS dataset which is publicly available on the NASA website and is a valuable resource for studying and analyzing engine degradation behaviors in various operational scenarios.
+       
+
+
+### [Interpretable Rules for Online Failure Prediction: A Case Study on the Metro do Porto dataset](https://arxiv.org/abs/2502.07394)
+
+**Authors:**
+Matthias Jakobs, Bruno Veloso, Joao Gama
+
+**Abstract:**
+Due to their high predictive performance, predictive maintenance applications have increasingly been approached with Deep Learning techniques in recent years. However, as in other real-world application scenarios, the need for explainability is often stated but not sufficiently addressed. This study will focus on predicting failures on Metro trains in Porto, Portugal. While recent works have found high-performing deep neural network architectures that feature a parallel explainability pipeline, the generated explanations are fairly complicated and need help explaining why the failures are happening. This work proposes a simple online rule-based explainability approach with interpretable features that leads to straightforward, interpretable rules. We showcase our approach on MetroPT2 and find that three specific sensors on the Metro do Porto trains suffice to predict the failures present in the dataset with simple rules.
+       
+
+
+### [From random walks to epidemic spreading: Compartment model with mortality for vector transmitted diseases](https://arxiv.org/abs/2502.08558)
+
+**Authors:**
+Téo Granger, Thomas M. Michelitsch, Bernard A. Collet, Michael Bestehorn, Alejandro P. Riascos
+
+**Abstract:**
+We focus on the propagation of vector-transmitted diseases in complex networks such as Barabási-Albert (BA) and Watts-Strogatz (WS) types. The class of such diseases includes Malaria, Dengue (vectors are mosquitos), Pestilence (vectors are fleas), and many others. There is no direct transmission of the disease among individuals. Individuals are mimicked by independent random walkers and the vectors by the nodes of the network. The walkers and nodes can be either susceptible (S) or infected and infectious (I) representing their states of health. Walkers in compartment I may die from the infection (entering the dead compartment D) whereas infected nodes never die. This assumption is based on the observation that vectors do not fall ill from their infection. A susceptible walker can be infected with a certain probability by visiting an infected node, and a susceptible node by visits of infected walkers. The time spans of infection of walkers and nodes as well as the survival time span of infected walkers are assumed to be independent random variables following specific probability density functions (PDFs). We implement this approach into a multiple random walkers model. We establish macroscopic stochastic evolution equations for the mean-field compartmental population fractions and compare this dynamics with the outcome of the random walk simulations. We obtain explicit expressions for the basic reproduction numbers $ R_M , R_0$ with and without mortality, respectively, and prove that $R_M < R_0$ . For $R_M , R_0 > 1$ the healthy state is unstable, and the disease is starting to spread in presence of at least one infected walker or node. For zero mortality, we obtain in explicit form the stable endemic equilibrium which exists for $R_0 > 1$ and which is independent of the initial conditions.
+       
+
+
+### [Learning the P2D Model for Lithium-Ion Batteries with SOH Detection](https://arxiv.org/abs/2502.14147)
+
+**Authors:**
+Maricela Best McKay, Bhushan Gopaluni, Brian Wetton
+
+**Abstract:**
+Lithium ion batteries are widely used in many applications. Battery management systems control their optimal use and charging and predict when the battery will cease to deliver the required output on a planned duty or driving cycle. Such systems use a simulation of a mathematical model of battery performance. These models can be electrochemical or data-driven. Electrochemical models for batteries running at high currents are mathematically and computationally complex. In this work, we show that a well-regarded electrochemical model, the Pseudo Two Dimensional (P2D) model, can be replaced by a computationally efficient Convolutional Neural Network (CNN) surrogate model fit to accurately simulated data from a class of random driving cycles. We demonstrate that a CNN is an ideal choice for accurately capturing Lithium ion concentration profiles. Additionally, we show how the neural network model can be adjusted to correspond to battery changes in State of Health (SOH).
+       
+
+
+### [Rashomon perspective for measuring uncertainty in the survival predictive maintenance models](https://arxiv.org/abs/2502.15772)
+
+**Authors:**
+Yigitcan Yardimci, Mustafa Cavus
+
+**Abstract:**
+The prediction of the Remaining Useful Life of aircraft engines is a critical area in high-reliability sectors such as aerospace and defense. Early failure predictions help ensure operational continuity, reduce maintenance costs, and prevent unexpected failures. Traditional regression models struggle with censored data, which can lead to biased predictions. Survival models, on the other hand, effectively handle censored data, improving predictive accuracy in maintenance processes. This paper introduces a novel approach based on the Rashomon perspective, which considers multiple models that achieve similar performance rather than relying on a single best model. This enables uncertainty quantification in survival probability predictions and enhances decision-making in predictive maintenance. The Rashomon survival curve was introduced to represent the range of survival probability estimates, providing insights into model agreement and uncertainty over time. The results on the CMAPSS dataset demonstrate that relying solely on a single model for RUL estimation may increase risk in some scenarios. The censoring levels significantly impact prediction uncertainty, with longer censoring times leading to greater variability in survival probabilities. These findings underscore the importance of incorporating model multiplicity in predictive maintenance frameworks to achieve more reliable and robust failure predictions. This paper contributes to uncertainty quantification in RUL prediction and highlights the Rashomon perspective as a powerful tool for predictive modeling.
+       
+
+
+### [PulseBat: A field-accessible dataset for second-life battery diagnostics from realistic histories using multidimensional rapid pulse test](https://arxiv.org/abs/2502.16848)
+
+**Authors:**
+Shengyu Tao, Guangyuan Ma, Huixiong Yang, Minyan Lu, Guodan Wei, Guangmin Zhou, Xuan Zhang
+
+**Abstract:**
+As electric vehicles (EVs) approach the end of their operational life, their batteries retain significant economic value and present promising opportunities for second-life use and material recycling. This is particularly compelling for Global South and other underdeveloped regions, where reliable energy storage is vital to addressing critical challenges posed by weak and even nonexistent power grid and energy infrastructures. However, despite this potential, widespread adoption has been hindered by critical uncertainties surrounding the technical performance, safety, and recertification of second-life batteries. In cases where they have been redeployed, mismatches between estimated and actual performance often render batteries technically unsuitable or hazardous, turning them into liabilities for communities they were intended to benefit. This considerable misalignment exacerbates energy access disparities and undermines the broader vision of energy justice, highlighting an urgent need for robust and scalable solutions to unlock the potential. In the PulseBat Dataset, the authors tested 464 retired lithium-ion batteries, covering 3 cathode material types, 6 historical usages, 3 physical formats, and 6 capacity designs. The pulse test experiments were performed repeatedly for each second-life battery with 10 pulse width, 10 pulse magnitude, multiple state-of-charge, and state-of-health conditions, e.g., from 0.37 to 1.03. The PulseBat Dataset recorded these test conditions and the voltage response as well as the temperature signals that were subject to the injected pulse current, which could be used as a valuable data resource for critical diagnostics tasks such as state-of-charge estimation, state-of-health estimation, cathode material type identification, open-circuit voltage reconstruction, thermal management, and beyond.
+       
+
+
+### [In-sensor 24 classes HAR under 850 Bytes](https://arxiv.org/abs/2502.17472)
+
+**Authors:**
+Ahmed. S Benmessaoud, Wassim Kezai, Farida Medjani, Khalid Bouaita, Tahar Kezai
+
+**Abstract:**
+The year 2023 was a key year for tinyML unleashing a new age of intelligent sensors pushing intelligence from the MCU into the source of the data at the sensor level, enabling them to perform sophisticated algorithms and machine learning models in real-time. This study presents an innovative approach to Human Activity Recognition (HAR) using Intelligent Sensor Processing Units (ISPUs), demonstrating the feasibility of deploying complex machine learning models directly on ultra-constrained sensor hardware. We developed a 24-class HAR model achieving 85\% accuracy while operating within an 850-byte stack memory limit. The model processes accelerometer and gyroscope data in real time, reducing latency, enhancing data privacy, and consuming only 0.5 mA of power. To address memory constraints, we employed incremental class injection and feature optimization techniques, enabling scalability without compromising performance. This work underscores the transformative potential of on-sensor processing for applications in healthcare, predictive maintenance, and smart environments, while introducing a publicly available, diverse HAR dataset for further research. Future efforts will explore advanced compression techniques and broader IoT integration to push the boundaries of TinyML on constrained devices.
+       
+
+
+### [Anomaly Detection in Complex Dynamical Systems: A Systematic Framework Using Embedding Theory and Physics-Inspired Consistency](https://arxiv.org/abs/2502.19307)
+
+**Authors:**
+Michael Somma, Thomas Gallien, Branka Stojanovic
+
+**Abstract:**
+Anomaly detection in complex dynamical systems is essential for ensuring reliability, safety, and efficiency in industrial and cyber-physical infrastructures. Predictive maintenance helps prevent costly failures, while cybersecurity monitoring has become critical as digitized systems face growing threats. Many of these systems exhibit oscillatory behaviors and bounded motion, requiring anomaly detection methods that capture structured temporal dependencies while adhering to physical consistency principles. In this work, we propose a system-theoretic approach to anomaly detection, grounded in classical embedding theory and physics-inspired consistency principles. We build upon the Fractal Whitney Embedding Prevalence Theorem, extending traditional embedding techniques to complex system dynamics. Additionally, we introduce state-derivative pairs as an embedding strategy to capture system evolution. To enforce temporal coherence, we develop a Temporal Differential Consistency Autoencoder (TDC-AE), incorporating a TDC-Loss that aligns the approximated derivatives of latent variables with their dynamic representations. We evaluate our method on the C-MAPSS dataset, a benchmark for turbofan aeroengine degradation. TDC-AE outperforms LSTMs and Transformers while achieving a 200x reduction in MAC operations, making it particularly suited for lightweight edge computing. Our findings support the hypothesis that anomalies disrupt stable system dynamics, providing a robust, interpretable signal for anomaly detection.
+       
+
+
+### [Battery State of Health Estimation and Incremental Capacity Analysis for Charging with General Current Profiles Using Neural Networks](https://arxiv.org/abs/2502.19586)
+
+**Authors:**
+Qinan Zhou, Gabrielle Vuylsteke, R. Dyche Anderson, Jing Sun
+
+**Abstract:**
+Incremental capacity analysis (ICA) and differential voltage analysis (DVA) conventionally require constant-current conditions for battery degradation monitoring, which restricts their applicability in real-world scenarios. This paper presents a unified approach to enable ICA/DVA-based degradation monitoring under general charging current profiles, which has not been addressed previously in the literature. First, a novel concept of virtual incremental capacity (IC) and different voltage (DV) is proposed. Second, two related convolutional neural networks (CNNs), called U-Net and Conv-Net, are proposed to construct virtual IC/DV curves and estimate the state of health (SOH) from general charging profiles across any state-of-charge (SOC) ranges that satisfy some constraints. Finally, two CNNs, called Mobile U-Net and Mobile-Net, are proposed to replace the U-Net and Conv-Net, respectively, for onboard implementations. They significantly reduce the computation and memory requirements, while retaining performance in virtual IC/DV curve construction and SOH estimation. Tested on an extensive experimental dataset of battery modules with various fast-charging protocols and SOC ranges, the proposed U-Net and Mobile U-Net construct accurate virtual IC/DV curves which enable the extraction of valuable degradation features. The proposed Conv-Net and Mobile-Net provide module-level SOH estimates with root-mean-square error (RMSE) of less than 0.5%.
+       
+
+
+## March
+### [Aerial Infrared Health Monitoring of Solar Photovoltaic Farms at Scale](https://arxiv.org/abs/2503.02128)
+
+**Authors:**
+Isaac Corley, Conor Wallace, Sourav Agrawal, Burton Putrah, Jonathan Lwowski
+
+**Abstract:**
+Solar photovoltaic (PV) farms represent a major source of global renewable energy generation, yet their true operational efficiency often remains unknown at scale. In this paper, we present a comprehensive, data-driven framework for large-scale airborne infrared inspection of North American solar installations. Leveraging high-resolution thermal imagery, we construct and curate a geographically diverse dataset encompassing thousands of PV sites, enabling machine learning-based detection and localization of defects that are not detectable in the visible spectrum. Our pipeline integrates advanced image processing, georeferencing, and airborne thermal infrared anomaly detection to provide rigorous estimates of performance losses. We highlight practical considerations in aerial data collection, annotation methodologies, and model deployment across a wide range of environmental and operational conditions. Our work delivers new insights into the reliability of large-scale solar assets and serves as a foundation for ongoing research on performance trends, predictive maintenance, and scalable analytics in the renewable energy sector.
+       
+
+
+### [RAAD-LLM: Adaptive Anomaly Detection Using LLMs and RAG Integration](https://arxiv.org/abs/2503.02800)
+
+**Authors:**
+Alicia Russell-Gilbert, Sudip Mittal, Shahram Rahimi, Maria Seale, Joseph Jabour, Thomas Arnold, Joshua Church
+
+**Abstract:**
+Anomaly detection in complex industrial environments poses unique challenges, particularly in contexts characterized by data sparsity and evolving operational conditions. Predictive maintenance (PdM) in such settings demands methodologies that are adaptive, transferable, and capable of integrating domain-specific knowledge. In this paper, we present RAAD-LLM, a novel framework for adaptive anomaly detection, leveraging large language models (LLMs) integrated with Retrieval-Augmented Generation (RAG). This approach addresses the aforementioned PdM challenges. By effectively utilizing domain-specific knowledge, RAAD-LLM enhances the detection of anomalies in time series data without requiring fine-tuning on specific datasets. The framework's adaptability mechanism enables it to adjust its understanding of normal operating conditions dynamically, thus increasing detection accuracy. We validate this methodology through a real-world application for a plastics manufacturing plant and the Skoltech Anomaly Benchmark (SKAB). Results show significant improvements over our previous model with an accuracy increase from 70.7% to 89.1% on the real-world dataset. By allowing for the enriching of input series data with semantics, RAAD-LLM incorporates multimodal capabilities that facilitate more collaborative decision-making between the model and plant operators. Overall, our findings support RAAD-LLM's ability to revolutionize anomaly detection methodologies in PdM, potentially leading to a paradigm shift in how anomaly detection is implemented across various industries.
+       
+
+
+### [The MACIV multiscale seismic experiments in the French Massif Central (2023-2027): deployment, data quality and availability](https://arxiv.org/abs/2503.05221)
+
+**Authors:**
+Coralie Aubert, Guilhem Scheiblin, Anne Paul, Hélène Pauchet, Aurélien Mordret, Vincent Baudot, Sébastien Chevrot, Nicolas Cluzel, Isabelle Douste-Bacqué, Franck Grimaud, Axel Jung, Stéphane Mercier, Piel Pawlowski, Sandrine Roussel, Thierry Souriot, Nikolai M. Shapiro, Matthieu Sylvander, Benjamin Vial, David Wolyniec
+
+**Abstract:**
+In the framework of the MACIV project, a consortium of French laboratories has deployed a temporary seismic network of 100 broadband stations in the French Massif Central (FMC) for 3-4 years (2023-2027). The project aims at imaging the crust and upper mantle of the FMC to better assess the sources of volcanism, and the impacts of the Variscan inheritance or the Cenozoic rift system on volcanic systems. A large-scale array of 35 broadband stations covers the entire FMC and complements the permanent networks to reach a homogeneous coverage with ~35 km spacing. This network, with XP code, is the French contribution to AdriaArray. The XP array is complemented with 3 quasi-linear north-south, east-west and northwest-southeast profiles with inter-station spacing of 5-20 km, making up the XF network of 65 stations. The profiles cross volcanic areas and the main Variscan structures. We describe the experimental setup designed to optimize the performance/cost ratio and minimize the number of field visits, the deployment, the state-of-health monitoring, the data management and the data quality control strategies, outcomes of our 15-years' experience with major temporary seismic experiments in France and neighboring countries, including AlpArray. We also show some preliminary results including hypocenter locations and receiver function analysis. The 2 broadband arrays will be supplemented in 2025 by a month-long deployment of 3 large-N dense arrays of 625 3-C short-period nodes. These dense arrays will complete our multi-scale seismic experiment and illuminate active faults and possible plumbing systems of the youngest volcanoes.
        
 
 
